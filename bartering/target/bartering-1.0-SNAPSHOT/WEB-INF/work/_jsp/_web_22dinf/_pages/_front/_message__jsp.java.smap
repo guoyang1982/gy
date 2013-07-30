@@ -1,0 +1,10 @@
+SMAP
+_message__jsp.java
+JSP
+*S JSP
+*F
++ 1 message.jsp
+WEB-INF/pages/front/message.jsp
+*L
+1#1:32,2
+*E

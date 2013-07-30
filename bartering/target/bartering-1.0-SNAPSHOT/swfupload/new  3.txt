@@ -1,0 +1,475 @@
+﻿<table cellspacing="0" cellpadding="0" border="0" width="980px;">
+                <tbody><tr id="id_tr_deal_type">
+                    <td width="1%"><i> * </i></td>
+                    <td width="11%">供需</td>
+                     <td class="space">
+                         <label for="id_deal_type_0">
+                             <input id="id_deal_type_0" name="deal_type" type="radio" value="1" checked="" autocomplete="off">
+                             <span>转让</span>
+                         </label>
+                         <label for="id_deal_type_1">
+                             <input id="id_deal_type_1" name="deal_type" type="radio" value="2" autocomplete="off">
+                             <span>求购</span>
+                         </label>
+                        <label for="id_deal_type_2">
+                             <input id="id_deal_type_2" name="deal_type" type="radio" value="3" autocomplete="off">
+                             <span>免费赠送</span>
+                         </label>
+                        <label for="id_deal_type_3">
+                             <input id="id_deal_type_3" name="deal_type" type="radio" value="4" autocomplete="off">
+                             <span>物品交换</span>
+                         </label>
+
+
+
+                     <span id="tip_span_deal_type"></span></td>
+                </tr>
+                <tr id="id_tr_title" style="display: none;">
+                    <td><i> * </i></td>
+                    <td>标题</td>
+                    <td><label for="textfield"></label>
+                        <input value="" name="title" type="text" id="id_title" size="45" maxlength="30" class="input1">
+                        <span id="tip_span_title"></span></td>
+                </tr>
+                <tr id="id_tr_my_res" style="">
+                    <td><i> * </i></td>
+                    <td>我有</td>
+                    <td>
+                    <input value="" name="my_res" type="text" id="id_my_res" class="input1" maxlength="20" size="45">
+
+                    <span id="tip_span_my_res"><span class="validatorMsg validatorError">忘记填写有什么东西啦</span></span>
+                    </td>
+                </tr>
+                <tr id="id_tr_yours_res" style="">
+                    <td><i> * </i></td>
+                    <td>想换</td>
+                    <td>
+                    <input value="" name="yours_res" type="text" class="input1" maxlength="8" size="20">
+                    <span id="tip_span_yours_res"><span class="validatorMsg validatorError">忘记填写想换物品啦</span></span>
+                    </td>
+                </tr>
+
+                <tr id="id_tr_price" style="">
+                    <td><i> * </i></td>
+                    <td>价格</td>
+                    <td>
+                       <input value="" name="price" type="text" id="id_price" size="4" maxlength="6" class="input2">
+                      &nbsp;元
+                        <span id="tip_span_price"><span class="validatorMsg validatorError">忘记填写价格啦</span></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><i> * </i></td>
+                    <td valign="top">描述</td>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" border="0" class="normal">
+                            <tbody><tr>
+                                 <td>
+                                      <textarea name="description" type="textarea" id="id_description" class="textarea1" rows="6" autocomplete="off"></textarea>
+                                 </td>
+                                 <td><span id="tip_span_description"><span class="validatorMsg validatorError">忘记填写描述啦！可以说说有没有毛病，用了多久哦~</span></span></td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+                <tr id="id_tr_minor_category" style="display: none;">
+                    <td><i> * </i></td>
+                    <td valign="top"><span id="title_minor_category">您交换的是</span></td>
+                    <td id="id_minor_category" class="space">
+                    <span id="id_minor_category_r" class="space">
+                                            <label> <input type="checkbox" tagtype="s" name="minor_category[]" size="12" maxlength="30" value="wupinjiaohuan" id="mc_wupinjiaohuan" checked="" checktype="s" autocomplete="off"> 物品交换 </label>
+                                                                <label id="charnoticeforcategory" style="color:gray;margin-right:8px;">或</label><label> <input type="checkbox" name="minor_category[]" size="12" maxlength="30" value="jiadian" id="mc_jiadian" tagtype="d" checktype="" autocomplete="off"> 家用电器 </label>
+                                            <label> <input type="checkbox" name="minor_category[]" size="12" maxlength="30" value="jiaju" id="mc_jiaju" tagtype="d" checktype="" autocomplete="off"> 家具 </label>
+                                            <label class="fc-gray"> <input type="checkbox" name="minor_category[]" size="12" maxlength="30" value="ershoushouji" id="mc_ershoushouji" tagtype="d" checktype="" autocomplete="off" disabled="disabled"> 手机 </label>
+                                            <label class="fc-gray"> <input type="checkbox" name="minor_category[]" size="12" maxlength="30" value="bijibendiannao" id="mc_bijibendiannao" tagtype="d" checktype="" autocomplete="off" disabled="disabled"><span id="tip_validator_1_minor_category"></span> 笔记本电脑 </label>
+                                        </span>
+                    <input name="recognized_by" type="hidden" value="unknown" id="id_recognized_by">
+                    <input name="其他分类" type="button" style="display:none;" id="other_cate" value="其他分类">
+                    <span id="tip_span_minor_category" style=""><span class="validatorMsg validatorInit">这些是赶集为您推荐的分类，最多选择3个哦</span></span>
+                    </td>
+                </tr>
+                <tr id="id_tr_minor_category_more" style="display: none;">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <div id="" style="border-bottom:1px solid #ccc;font-size:13px;padding:3px 0;margin-bottom:10px;width:430px">
+                            <span id="span_minor_category_notice1" style="">
+                                都不是？您也可以选择 <a style="color:#24d" href="javascript:void(0);" id="secondmarkt_more_category">更多分类»</a>
+                            </span>
+                            <span id="span_minor_category_notice2" style="display: none;">
+                                 您已经选择了3个分类，最多选择3个哦~                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">&nbsp;</td>
+                    <td valign="top">上传照片</td>
+                     <td style="width:660px;">
+                        <div class="ui-uploader" id="uploader_container">
+                            <div class="ui-uploader-action">
+                                <div class="ui-uploader-iframe-container"><div><object id="SWFUpload_0" type="application/x-shockwave-flash" data="http://sta.ganji.com/public/swf/swfupload-2.__1361851200__.swf" width="81" height="24" class="swfupload"><param name="wmode" value="opaque"><param name="movie" value="http://sta.ganji.com/public/swf/swfupload-2.__1361851200__.swf"><param name="quality" value="high"><param name="allowScriptAccess" value="always"><param name="flashvars" value="movieName=SWFUpload_0&amp;uploadURL=http%3A%2F%2Fimage.ganji.com%2Fupload.php&amp;useQueryString=false&amp;requeueOnError=false&amp;httpSuccess=&amp;assumeSuccessTimeout=0&amp;params=maxSize%3D10485759%26amp%3BresizeImage%3Dtrue%26amp%3BresizeWidth%3D800%26amp%3BresizeHeight%3D600%26amp%3BresizeCutEnable%3Dfalse%26amp%3BcreateThumb%3Dfalse%26amp%3BthumbWidth%3D80%26amp%3BthumbHeight%3D80%26amp%3BthumbCutEnable%3Dtrue%26amp%3BminWidth%3D0%26amp%3BminHeight%3D0%26amp%3BuploadDir%3Dsecondmarket%26amp%3BMAX_FILE_SIZE%3D10485759%26amp%3Btype%3Dgif%252Cjpg%252Cjpeg%252Cpng%252Cbmp&amp;filePostName=Filedata&amp;fileTypes=*.gif%3B*.jpg%3B*.jpeg%3B*.png%3B*.bmp&amp;fileTypesDescription=%E5%9B%BE%E7%89%87&amp;fileSizeLimit=10485759&amp;fileUploadLimit=8&amp;fileQueueLimit=8&amp;debugEnabled=true&amp;buttonImageURL=http%3A%2F%2Fsta.ganji.com%2Fsrc%2Fimage%2Ficon%2Fupload.png&amp;buttonWidth=81&amp;buttonHeight=24&amp;buttonText=&amp;buttonTextTopPadding=0&amp;buttonTextLeftPadding=0&amp;buttonTextStyle=.button%20%7B%20font-family%3A%20Helvetica%2C%20Arial%2C%20sans-serif%3B%20font-size%3A%2012pt%3B%20%7D%20.buttonSmall%20%7B%20font-size%3A%2010pt%3B%20%7D&amp;buttonAction=-110&amp;buttonDisabled=false&amp;buttonCursor=-2"></object></div></div>
+                                <a href="###" class="ui-uploader-cloud-photo-btn" data-puid="">&nbsp;</a>
+                                <a href="http://mobile.ganji.com/" target="_blank">下载手机客户端&gt;&gt;&gt;</a>
+                                <span id="tip_span_input_upload_image"></span>
+                            </div>
+                            <span class="ui-uploader-message" style="margin-left: 0">最多8张，可多选上传，最大10MB。有图可使浏览量增加3倍，并会在推荐位显示。</span>
+                            <ul class="ui-uploader-thumbImages ui-uploader-sortable"></ul>
+                        </div>
+                        <input id="input_upload_image" type="hidden" name="images">
+                    </td>
+                </tr>
+                <tr id="id_tr_district">
+                    <td width="2%"><i> * </i></td>
+                    <td width="10%">地点</td>
+                    <td width="88%">
+                        <span>
+                        <select name="district" type="select" id="id_district" autocomplete="off">
+<option value="">请选择</option>
+<option value="173,海淀">海淀</option>
+<option value="174,朝阳">朝阳</option>
+<option value="175,东城">东城</option>
+<option value="176,西城">西城</option>
+<option value="177,崇文">崇文</option>
+<option value="178,宣武">宣武</option>
+<option value="179,丰台">丰台</option>
+<option value="180,石景山">石景山</option>
+<option value="185,昌平">昌平</option>
+<option value="183,通州">通州</option>
+<option value="182,大兴">大兴</option>
+<option value="184,顺义">顺义</option>
+<option value="181,房山">房山</option>
+<option value="186,密云">密云</option>
+<option value="190,门头沟">门头沟</option>
+<option value="187,怀柔">怀柔</option>
+<option value="189,平谷">平谷</option>
+<option value="188,延庆">延庆</option>
+<option value="3283,燕郊">燕郊</option>
+</select>
+                        <select name="street" type="select" id="id_street" autocomplete="off">
+
+<option value="-1">不限</option><option value="506,密云">密云</option><option value="508,十里堡">十里堡</option><option value="520,溪翁庄">溪翁庄</option><option value="522,穆家峪">穆家峪</option><option value="512,太师屯">太师屯</option><option value="510,北庄">北庄</option><option value="514,新城子">新城子</option><option value="516,古北口">古北口</option><option value="518,不老屯">不老屯</option><option value="826,其他">其他</option></select>
+                        </span>
+                                                <span id="tip_span_district"><span class="validatorMsg validatorValid">&nbsp;</span></span>
+                    </td>
+                </tr>
+                                <tr style="display:none;" id="id_tr_tag">
+                    <td>&nbsp;</td>
+                    <td>标签</td>
+                    <td id="id_taglab" style="width:630px;"></td>
+                    <input type="hidden" name="old_tag" value="" id="id_old_tag">
+                </tr>
+
+
+                <tr>
+                    <td><i> * </i></td>
+                    <td>联系电话</td>
+                    <td width="88%">
+                        <input value="" name="phone" type="text" id="id_phone" size="20" class="input1" maxlength="30">
+                        <span class="tips_wrap"><span id="tip_span_phone"></span></span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>QQ号</td>
+                    <td width="88%">
+                        <input value="" name="im" type="text" size="20" class="input1" maxlength="30">
+                        <span class="tips_wrap"><span id="tip_span_im"></span></span></td>
+                </tr>
+
+
+                <tr>
+                    <td><i> * </i></td>
+                    <td>联系人</td>
+                    <td><input value="" name="person" type="text" size="20" class="input1" maxlength="6">
+                    <span id="tip_span_person"></span>
+                    </td>
+                </tr>
+                                <tr>
+                    <td valign="top"><i>*</i></td>
+                    <td valign="top">发布人</td>
+                    <td valign="top" id="id_agent"><label for="id_agent_0"><input id="id_agent_0" name="agent" type="radio" value="0" checked="" autocomplete="off">个人</label>
+<label for="id_agent_1"><input id="id_agent_1" name="agent" type="radio" value="1" autocomplete="off">商家</label>
+                    <span id="tip_span_agent"></span>
+                    <p style="display:none;font-size: 12px;">您的信息将会被发布至商家列表中。</p>
+                    </td>
+                </tr>
+                
+                <tr id="showcode" style="display:none;">
+                    <td><i> * </i></td>
+                    <td>验证码</td>
+                    <td>
+                        <input class="input2" name="checkcode" value="" id="checkcode_input" maxlength="4">
+                        <img id="img_checkcode" src="/common/checkcode.php?nocache=1361854756" align="absmiddle">
+                        <span id="tip_span_checkcode"></span>
+                        <script>
+                        function resetCheckcode(){
+                     var img = document.getElementById('img_checkcode');
+                     if (img!=null) {
+                     img.src = '/common/checkcode.php?nocache=' + (new Date() * 1);
+                     }
+                     var ccode = document.getElementById('checkcode_input');
+                     ccode.value = '';
+                     ccode.focus();
+                     return false;
+                     }
+                        </script>
+                        <a href="#" onclick="resetCheckcode();return false;">看不清？换个验证码</a>
+                    </td>
+                </tr>
+
+                
+
+
+<script type="text/javascript">
+</script>
+
+<style type="text/css">
+    .to-top-div {
+        line-height: 16px;
+        width: 600px;
+    }
+    .to-top-item-line {
+        border-bottom: 1px dotted #999;
+        height: 10px;
+        margin-bottom: 10px;
+    }
+    .to-top-div-title {
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .to-top-div-hide {
+        display:none;
+    }
+</style>
+
+
+<tr class="self_service_area" style="">
+    <td colspan="3">
+        <div class="dot_line"></div>
+        <input type="hidden" id="sticky" name="sticky" value="0">
+    </td>
+</tr>
+<tr class="self_service_area" style="">
+        <td valign="top"></td>
+    <td valign="top" style="padding-top:5px;">付费推广</td>
+    
+    <td>
+        <div class="to-top-div" style="margin-top:0;">
+
+                <div class="to-top-item" style="margin-top:0;">
+            <p>
+                <input name="self_service" type="checkbox" value="self_sticky" size="14" maxlength="30" id="self_sticky">
+                                <strong class="to-top-div-title">置顶/高级置顶（将本帖置顶到列表页顶部，<em class="f-c-red">快速获得</em>推广效果     <span class="sticky_price_area"><em class="f-c-red"><span class="sticky_price">7.56</span>元/天起</em></span>）</strong>
+            </p>
+
+            <p class="pl28" style="padding-top:5px;">•&nbsp;排名提前，置顶在页面的前面，效果立即提升<em class="f-c-red beishu">5</em>倍以上&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="top_select_click">更多...</a></p>
+            <p class="pl28" style="padding-top: 5px; display: none;">•&nbsp;本类别普通信息每日点击约<em class="f-c-red post_click">20</em>次，置顶后预计约<em class="f-c-red sticky_click">300</em>次</p>
+            <p class="pl28 sticky_price_area" style="padding-top: 5px; display: none;">•&nbsp;最低<em class="f-c-red sticky_price">7.56</em>元/天，最适合单条信息的短期推广</p>
+        </div>
+        
+        
+                <div class="to-top-item" id="js_self_direction_tips"><div class="to-top-item-line"></div>
+            <p>
+                <input name="self_service" type="checkbox" value="self_direction" size="14" maxlength="30" id="self_direction">
+                <strong class="to-top-div-title">定向推广（<em class="f-c-red direction_price">0.29</em><span class="f-c-red">元/点击</span>）<span style="color:orange;">最新推出...</span><a class="direction_tuiguang" href="http://www.ganji.com/tuiguang/fuwu/dingxiang/?c=14" gjalog="/direction_xiaoguozhongxin@pos=post_pub@atype=click" target="_blank" style="font-size:13px;float:right;">什么是定向推广？</a></strong>
+            </p>
+            <p class="pl28" style="padding-top:5px;">•&nbsp;位置更醒目，在列表右侧区域，展示位置更多&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="top_select_click">更多...</a></p>
+            <p class="pl28" style="padding-top: 5px; display: none;">•&nbsp;内容更全面，同时展示标题和内容，更富有吸引力</p>
+            <p class="pl28" style="padding-top: 5px; display: none;">•&nbsp;曝光率高，选择想投放的类别，精准投放</p>
+        </div>
+        
+        
+        </div>
+    </td>
+</tr>
+
+<script type="text/javascript">
+function topDescMoreHide(el) {
+    $(el).find('.pl28').each(function(index) {
+        if (index > 0) {
+            $(this).hide();
+        }
+    });
+}
+
+function topDescMoreShow(el) {
+    $(el).find('.pl28').show();
+}
+
+function sendSelfServiceLogTrack(btnType) {
+    try {
+        var $selectedEl = $('#self_sticky, #self_premier, #self_direction,#self_subSticky').filter(':checked');
+        var gjalog 	= '';
+        var elId	= '';
+        var source	= '';
+        
+        if ($selectedEl.size() > 0) {
+            elId    = $selectedEl.attr('id');
+            source	= elId;
+            
+            if (btnType) {
+    			source	= source + '_' + btnType;
+            }
+    
+            source	= source + '_pub_tips';
+        }
+        else {
+            elId	= 'self_service';
+    		source	= elId + '_pub_success';
+        }
+    
+        gjalog  = '/' + elId + '/trace@source=' + source + '@city_id=12@category_id=14@major_category_id=151@puid=-@atype=click';
+        if(!gjalog) {
+            return false;
+        }
+    
+        GJ.LogTracker.trackEvent(gjalog); //主动发起请求
+	} catch (e) {}
+}
+
+GJ.use('jquery', function() {$(function() {
+    var categoryId = 14;
+    if (categoryId == 7) {
+        try {$("#js_self_direction_tips").insertBefore($("#self_premier_fang"));} catch (ex){}
+    }
+    $('#newsubmiting').hide();
+    var sticky_btn = '&nbsp;&nbsp;<input style="display:none" type="submit" value="立即置顶发布&nbsp;&gt;&gt;"  class="btn-style1" id="sticky_submiting_btn" />';
+    $('.btn-style2').after(sticky_btn);
+
+
+
+    var priceParams = {
+        cate    : '14',
+        m       : '151',
+        city    : '12'
+    };
+
+    function callback_with_extraParam(ret,extraParam) {
+        if (typeof ret.sticky == 'object' && (ret.sticky['sticky_price'] > 0 || ret.sticky['sticky_price'] == -1 || extraParam==14)) {
+
+            if (ret.sticky['sticky_price'] <= 0) {
+                $('.self_service_area').find('.sticky_price_area').remove();
+            }
+
+            $.each(ret, function(serviceName, serviceInfo) {
+                $.each(serviceInfo, function(serviceKey, serviceValue) {
+                    $('.self_service_area').find('.' + serviceKey ).html(serviceValue);
+                });
+            });
+            if(ret.direction.price) {
+                var $o = $('#js_self_direction_tips');
+                $o.find('.direction_price').html(ret.direction.price);
+                $o.find('.direction_tuiguang').attr('href', ret.direction.promotion);
+            }else {
+                $('#js_self_direction_tips').hide();
+            }
+
+            if(ret.subSticky.subSticky_price) {
+                var $o = $('#js_self_subSticky_tips');
+                $o.find('.subSticky_price').html(ret.subSticky.subSticky_price);
+            }else {
+                $('#js_self_subSticky_tips').hide();
+            }
+
+            $('.to-top-item').each(function(index) {
+                if (index > 0) {
+                    $(this).prepend('<div class="to-top-item-line"></div>');
+                }
+                topDescMoreHide(this);
+            });
+            $('#sticky_submiting_btn').show();
+            $('.self_service_area').show();
+        }
+    }
+
+    var extraParam = priceParams['cate'];
+    $.getJSON('/ajax.php?module=get_advance_info&dir=self_sticky', priceParams, function callback(ret){
+        callback_with_extraParam(ret,extraParam);
+    });
+
+
+    $('#sticky_submiting_btn').click(function(){
+        if($('#self_sticky, #self_premier, #self_direction, #self_subSticky').filter(':checked').size()==0){
+            if($('#self_sticky').size()){
+                $('#self_sticky').attr('checked', true);
+            } else {
+                $('#self_premier').attr('checked', true);
+            }
+        }
+
+        sendSelfServiceLogTrack('tg');
+
+            });
+
+    $('.btn-style2').click(function() {
+        sendSelfServiceLogTrack();
+    });
+
+
+    $('input[name=self_service],.to-top-div-title').click(function() {
+        var clickArea   = $(this).parents('.to-top-item');
+        var checked     = clickArea.find('input[name=self_service]').attr('checked');
+        if (typeof $(this).attr('name') == 'undefined') {
+            if (!checked) {
+                checked = true;
+            } else {
+                checked = false;
+            }
+        }
+  
+        $(this).parents('td').find('input[name=self_service]').attr('checked', false);
+
+        $('.to-top-item').each(function(index) {
+            $(this).find('.top_select_click:first').show();
+            topDescMoreHide(this);
+        });
+
+        if (checked) {
+            clickArea.find('input[name=self_service]').attr('checked', true);
+            topDescMoreShow($(this).parents('.to-top-item')[0]);
+            clickArea.find('.top_select_click').hide();
+        }
+    });
+
+    $('.top_select_click').click(function() {
+        topDescMoreShow($(this).parents('.to-top-item')[0]);
+        $(this).parents('.to-top-item').find('.top_select_click').hide();
+        return false;
+    });
+
+    });});
+</script>
+
+
+                
+                <tr>
+<td colspan="4" style="padding:0;">
+<iframe scrolling="no" id="user_iframe" src="/pub/pub_login_iframe.php?gjalog=wu_login_hint" width="100%" frameborder="0" style="overflow: hidden;" onload="autoHeight(this)" height="227"></iframe>
+</td>
+</tr>
+<script>
+var autoHeight = function (iframe){
+	var doc = iframe.contentWindow.document, fn;
+	(fn = function (){
+		try{
+			var bHeight = doc.body.scrollHeight;
+			var dHeight = doc.documentElement.scrollHeight;
+			var height = Math.min(bHeight, dHeight);
+			iframe.height = height;
+		}catch(ex){}
+	})();
+	setInterval(fn, 100);
+};
+</script>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td id="submiting">
+                        <input type="hidden" value="" name="yanbao_type">
+                        <input id="pub_submit" type="submit" class="btn-style2" value="注册后发布" gjalog="/wu_login_hint/login@atype=click">&nbsp;&nbsp;<input style="" type="submit" value="注册并置顶发布" class="btn-style1" id="sticky_submiting_btn">
+                    </td>
+
+                    
+                </tr>
+
+            </tbody></table>
